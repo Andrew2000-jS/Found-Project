@@ -102,7 +102,7 @@ contract FoundProject {
         emit ChangeState(state);
     }
 
-    function fundProject(index) public payable notOnlyOnwer(index) {
+    function fundProject(uint256 index) public payable notOnlyOnwer(index) {
         Project memory project = projects[index];
 
         require(
